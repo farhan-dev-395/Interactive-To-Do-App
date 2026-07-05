@@ -1,0 +1,43 @@
+    body {
+      font-family: Arial;
+      background: #edf0de;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: rgb(191, 236, 254);
+      padding: 20px;
+      border-radius: 10px;
+    }
+     button, select {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 10px
+    }
+    input{   
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 3px;
+      width: 95%;
+    }
+    li {
+      list-style: none;
+      background: #edf0de;
+      padding: 10px;
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: grab;
+      border-radius: 10px;
+    }
+    .completed {
+      text-decoration: line-through;
+      background: #c8f7c5;
+    }
+    .actions button {
+      margin-left: 5px;
+    }
