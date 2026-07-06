@@ -1,6 +1,5 @@
 ;    let tasks = [];
 
-  // ===== ADD TASK =====
   function addTask() {
     let input = document.getElementById("taskInput");
     let text = input.value.trim();
@@ -22,7 +21,6 @@
     renderTasks(tasks);
   }
 
-  // ===== RENDER =====
   function renderTasks(arr) {
     let list = document.getElementById("taskList");
     list.innerHTML = "";
@@ -42,7 +40,6 @@
         </div>
       `;
 
-      // DRAG EVENTS
       li.addEventListener("dragstart", dragStart);
       li.addEventListener("dragover", dragOver);
       li.addEventListener("drop", drop);
@@ -51,13 +48,11 @@
     });
   }
 
-  // ===== DELETE =====
   function deleteTask(id) {
     tasks = tasks.filter(t => t.id !== id);
     renderTasks(tasks);
   }
 
-  // ===== EDIT =====
   function editTask(id) {
     let newText = prompt("Edit task:");
     if (!newText) return;
@@ -72,7 +67,6 @@
     renderTasks(tasks);
   }
 
-  // ===== TOGGLE COMPLETE =====
   function toggleComplete(id) {
     tasks = tasks.map(t => {
       if (t.id === id) {
@@ -84,7 +78,6 @@
     renderTasks(tasks);
   }
 
-  // ===== FILTER =====
   function filterTasks(type) {
     if (type === "completed") {
       renderTasks(tasks.filter(t => t.completed));
@@ -95,7 +88,6 @@
     }
   }
 
-  // ===== DRAG & DROP =====
   let draggedId = null;
 
   function dragStart(e) {
@@ -119,5 +111,4 @@
     renderTasks(tasks);
   }
 
-  // INITIAL RENDER
   renderTasks(tasks);
